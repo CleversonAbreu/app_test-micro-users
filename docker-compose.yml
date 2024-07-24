@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  # App Service
+  app:
+    build: .
+    container_name: micro_users_app
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - '3030:3030'
